@@ -56,7 +56,6 @@ var server = http.createServer(function(req, res) {
      });
 
      req.on('end', () => {
-       // eslint-disable-next-line max-statements
        fs.readFile(petsPath, 'utf8', (readErr, petsJSON) => {
          if (readErr) {
            throw readErr;
